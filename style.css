@@ -16,6 +16,7 @@ header {
 .menu > ul {
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-left: 60px;
   font-size: x-large;
   list-style-type: none;
   max-width: 100%;
@@ -24,7 +25,7 @@ header {
 
 .content{
   padding-top: 65px;
-  padding-left: 100px;
+  padding-left: 160px;
 }
 
 ul > li {
@@ -40,8 +41,35 @@ li > ul {
   padding-left: 15px;
 }
 
+.content > ul {
+  list-style-type: none;
+  padding-left: 18px;
+  padding-top: 25px;
+  font-size: x-large;
+  
+}
+
+.content > ul > li {
+  padding-bottom: 45px;
+}
+
+.content > li{
+  list-style-type: none;
+}
+
 .greyIcon{
   list-style-image: url(img/icon.png);
+}
+
+#plus{
+  color: darkblue;
+  font-size: x-large;
+  padding: 3px;
+}
+
+#plus:hover{
+  background-color: rgb(164, 164, 167);
+  max-width: 120px;
 }
 
 .arrow {
