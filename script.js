@@ -28,6 +28,10 @@ addTask.addEventListener("click", event =>{
             x.classList.add("x-class")
             newTask.appendChild(x)
 
+            x.addEventListener("click", event => {
+                deleteTask(newTask);
+            })
+
             edit = document.createElement("p");
             edit.innerHTML = `<strong class="edit-icon">/</strong> Edit task`;
             edit.classList.add("edit");
@@ -39,8 +43,6 @@ addTask.addEventListener("click", event =>{
                 editTask(editInp, newTask);
             })
             
-            
-            selectIcons();
 
             inp.remove();
         }
@@ -65,6 +67,10 @@ function editTask(editInp, newTask) {
             x.classList.add("x-class")
             newTask.appendChild(x)
 
+            x.addEventListener("click", event => {
+                deleteTask(newTask);
+            })
+
             edit = document.createElement("p");
             edit.innerHTML = `<strong class="edit-icon">/</strong> Edit task`;
             edit.classList.add("edit");
@@ -79,4 +85,8 @@ function editTask(editInp, newTask) {
             editInp.remove();
         }
     })
+}
+
+function deleteTask(newTask) {
+    newTask.remove();
 }
