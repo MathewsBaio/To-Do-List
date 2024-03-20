@@ -139,3 +139,7 @@ li > ul {
   padding: 2px;
   font-weight: bolder;
 }
+
+.edit-icon:hover{
+  background-color: rgb(164, 164, 167);;
+}

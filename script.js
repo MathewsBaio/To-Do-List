@@ -1,13 +1,14 @@
 let addTask = document.getElementById("plus");
 let taskList = document.querySelector(".content > ul");
-let x 
-let edit;
+let x, inp, editInp
+let edit, editIcons, editedTask;
+let control = false;
 
 let limit = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
 //Evento para criar input que recebera nova task
 addTask.addEventListener("click", event =>{
-    let inp = document.createElement("input");
+    inp = document.createElement("input");
     inp.setAttribute("type","text");
     inp.setAttribute("maxlength", limit.length - 2)
     inp.setAttribute("size", limit.length - 2)
@@ -28,11 +29,54 @@ addTask.addEventListener("click", event =>{
             newTask.appendChild(x)
 
             edit = document.createElement("p");
-            edit.innerHTML = `<strong class="edit-icon">/</strong> Edit task`
-            edit.classList.add("edit")
+            edit.innerHTML = `<strong class="edit-icon">/</strong> Edit task`;
+            edit.classList.add("edit");
             newTask.appendChild(edit);
+
+            edit.addEventListener("click", event =>{
+                editInp = document.createElement("input");
+                createInput(editInp)
+                editTask(editInp, newTask);
+            })
+            
+            
+            selectIcons();
 
             inp.remove();
         }
     })
 })
+
+function createInput(editInp) {
+    editInp.setAttribute("type","text");
+    editInp.setAttribute("maxlength", limit.length - 2);
+    editInp.setAttribute("size", limit.length - 2);
+    document.querySelector(".content > ul").appendChild(editInp);
+}
+
+function editTask(editInp, newTask) {
+    editInp.addEventListener("keydown", event => {
+        if (event.key == "Enter") {
+            newTask.innerHTML = `<input type="checkbox">`
+            newTask.innerHTML += event.target.value
+
+            x = document.createElement("p");
+            x.textContent = `-`
+            x.classList.add("x-class")
+            newTask.appendChild(x)
+
+            edit = document.createElement("p");
+            edit.innerHTML = `<strong class="edit-icon">/</strong> Edit task`;
+            edit.classList.add("edit");
+            newTask.appendChild(edit);
+
+            edit.addEventListener("click", event =>{
+                editInp = document.createElement("input");
+                createInput(editInp)
+                editTask(editInp, newTask);
+            })
+
+            editInp.remove();
+        }
+    })
+}
