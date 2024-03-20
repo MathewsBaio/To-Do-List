@@ -38,7 +38,7 @@ ul > li {
 li > ul {
   list-style-type: none;
   padding-top: 15px;
-  padding-left: 15px;
+  padding-left: 0px;
 }
 
 .content > ul {
