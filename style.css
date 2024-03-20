@@ -109,16 +109,23 @@ li > ul {
 .content > ul li:hover{
   border: 1px solid #acacac;
   width: 800px;
+  .x-class{
+    display: block;
+  }
+  .edit{
+    display: block;
+  }
 }
 
 .x-class{
+  display: none;
   position: absolute;
   bottom: 0;
   right: 5px;
   padding: 0;
   margin: 0;
   color: red;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .x-class:hover{
@@ -126,6 +133,7 @@ li > ul {
 }
 
 .edit{
+  display: none;
   position: absolute;
   bottom: 0;
   right: 730px;
