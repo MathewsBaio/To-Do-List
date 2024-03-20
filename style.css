@@ -26,6 +26,8 @@ header {
 .content{
   padding-top: 65px;
   padding-left: 160px;
+  width: 600px;
+  
 }
 
 ul > li {
@@ -44,14 +46,19 @@ li > ul {
 .content > ul {
   list-style-type: none;
   padding-top: 25px;
-
   font-size: x-large;
   padding-left: 0;
   
 }
 
 .content > ul > li {
+  position: relative;
+  padding-top: 20px;
   padding-bottom: 45px;
+  max-width: 550;
+  width: 800px;
+  height: 20px;
+  word-wrap: break-word;
 }
 
 .content > li{
@@ -99,5 +106,36 @@ li > ul {
   list-style-image: url(img/blueicon.png);
 }
 
+.content > ul li:hover{
+  border: 1px solid #acacac;
+  width: 800px;
+}
 
+.x-class{
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  padding: 0;
+  margin: 0;
+  color: red;
+  font-size: xx-large;
+}
 
+.x-class:hover{
+  background-color: rgb(164, 164, 167);
+}
+
+.edit{
+  position: absolute;
+  bottom: 0;
+  right: 730px;
+  padding: 0;
+  margin: 0;
+  font-size: medium;
+}
+
+.edit-icon{
+  color: blue;
+  padding: 2px;
+  font-weight: bolder;
+}
