@@ -43,9 +43,10 @@ li > ul {
 
 .content > ul {
   list-style-type: none;
-  padding-left: 18px;
   padding-top: 25px;
+
   font-size: x-large;
+  padding-left: 0;
   
 }
 
