@@ -1,10 +1,12 @@
+//Content Section
+
 let addTask = document.getElementById("plus");
 let taskList = document.querySelector(".content > ul");
-let x, inp, editInp
+let x, inp, editInp;
 let edit, editIcons, editedTask;
-let control = false;
 
-let limit = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+let limit = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 
 //Evento para criar input que recebera nova task
 addTask.addEventListener("click", event =>{
@@ -90,3 +92,15 @@ function editTask(editInp, newTask) {
 function deleteTask(newTask) {
     newTask.remove();
 }
+
+//Menu Section
+
+let menuList = document.querySelector("#arrow-menu > ul");
+let arrowIcon = document.querySelector("#arrow-menu > i");
+
+//evento para colapsar menu
+arrowIcon.addEventListener("click", event =>{
+    menuList.classList.toggle("collapsed")
+    arrowIcon.classList.toggle("down")
+})
+

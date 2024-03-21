@@ -1,6 +1,10 @@
 .container{
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 10% auto;
+  grid-template-areas: 
+  "header header"
+  "menu content";
   
 }
 
@@ -9,39 +13,29 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 7%;
+    height: 8%;
     background: darkblue;
+    grid-area: header;
   }
 
-.menu > ul {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 60px;
+.menu{
+  grid-area: menu;
+  padding-top: 15px;
+  padding-bottom: 0x;
+  padding-left: 20px;
   font-size: x-large;
   list-style-type: none;
   max-width: 100%;
-  
 }
+
 
 .content{
-  padding-top: 65px;
-  padding-left: 160px;
-  width: 600px;
-  
+  padding-top: 10px;
+  padding-left: 20px;
+  width: 800px;
+  grid-area: content;
 }
 
-ul > li {
-  padding-bottom: 15px;
-  
-  
-
-}
-
-li > ul {
-  list-style-type: none;
-  padding-top: 15px;
-  padding-left: 0px;
-}
 
 .content > ul {
   list-style-type: none;
@@ -65,8 +59,14 @@ li > ul {
   list-style-type: none;
 }
 
+iframe{
+  width: 850px;
+  height: 800px;
+}
+
 .greyIcon{
   list-style-image: url(img/icon.png);
+  padding-bottom: 15px;
 }
 
 #plus{
@@ -88,22 +88,35 @@ li > ul {
   margin: 3px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+  
 }
 
-
+.selected{
+  font-weight: bold;
+}
 
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
 
-.selected{
-  font-weight: bold;
-  
+.collapsed{
+  display: none;
 }
 
 .blueIcon{
   list-style-image: url(img/blueicon.png);
+  padding-top: 10px;
+  
+}
+
+#arrow-menu{
+  list-style-type: none;
+}
+
+#add-project{
+  font-size: medium;
+  padding-left: 40px;
 }
 
 .content > ul li:hover{
